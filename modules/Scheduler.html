@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<img src="../data/icon.jpg" />
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/Light.html">Light</a></li>
+  <li><strong>Scheduler</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Scheduler</code></h1>
+<p>scheduler module thing.</p>
+<p>
+ A simple module used for queuing and cancelling tasks</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: printersofa</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#new">new ()</a></td>
+	<td class="summary">Constructor
+ Creates a new scheduler object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Run">Run (delayTime, scheduledTask)</a></td>
+	<td class="summary">Run
+ Queues scheduledTask to be ran after delayTime.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RunTaskOfType">RunTaskOfType (taskType, delayTime, scheduledTask)</a></td>
+	<td class="summary">RunTaskOfType
+ Queues scheduledTask of type taskType to be ran after delayTime that can be cancelled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Cancel">Cancel (taskType)</a></td>
+	<td class="summary">Cancels
+ Cancels any task of type taskType.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new ()</strong>
+    </dt>
+    <dd>
+    Constructor
+ Creates a new scheduler object.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Scheduler
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">scheduler.new()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Run"></a>
+    <strong>Run (delayTime, scheduledTask)</strong>
+    </dt>
+    <dd>
+    Run
+ Queues scheduledTask to be ran after delayTime.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">delayTime</span>
+            <span class="types"><span class="type">number</span></span>
+         Time before the task will run
+        </li>
+        <li><span class="parameter">scheduledTask</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to run after delayTime
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">scheduler:Run(<span class="number">30</span>, someFunction)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "RunTaskOfType"></a>
+    <strong>RunTaskOfType (taskType, delayTime, scheduledTask)</strong>
+    </dt>
+    <dd>
+    RunTaskOfType
+ Queues scheduledTask of type taskType to be ran after delayTime that can be cancelled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">taskType</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A string that represents the type of task
+        </li>
+        <li><span class="parameter">delayTime</span>
+            <span class="types"><span class="type">number</span></span>
+         Time before the task will run
+        </li>
+        <li><span class="parameter">scheduledTask</span>
+            <span class="types"><span class="type">function</span></span>
+         The function to run after delayTime
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">scheduler:RunTaskOfType(<span class="string">"taskType"</span>, <span class="number">30</span>, someFunction)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Cancel"></a>
+    <strong>Cancel (taskType)</strong>
+    </dt>
+    <dd>
+    Cancels
+ Cancels any task of type taskType.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">taskType</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A string that represents the type of task
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">scheduler:Cancel(<span class="string">"taskType"</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-04-15 18:13:46 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
